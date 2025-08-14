@@ -420,6 +420,24 @@ p.lead {
   font-size: 0.95rem;
 }
 
+.feedback-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.feedback-form .radio-inline {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.feedback-form .radio-inline label {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: normal;
+}
 
 footer {
   margin-top: 28px;
