@@ -319,14 +319,50 @@ p.lead {
 }
 
 /* =========================
-   CTA & FOOTER
+   CTA
 ========================= */
-.cta {
-  display: flex;
-  gap: 12px;
-  align-items: center;
-  margin-top: 24px;
+#cta-section {
+  background-color: var(--muted);
+  padding: 60px 20px;
+  border-radius: var(--radius);
+  margin-top: 40px;
 }
+
+#cta-section h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 15px;
+  color: var(--navy);
+}
+
+#cta-section .cta-lead {
+  max-width: 600px;
+  margin: 0 auto 30px;
+  font-size: 1.1em;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+#cta-section .btn {
+  font-size: 1rem;
+  padding: 14px 24px;
+}
+
+#cta-section .btn.secondary {
+  background: transparent;
+  color: var(--navy);
+  border: 2px solid rgba(20, 61, 107, 0.2);
+  box-shadow: none;
+}
+
+
 
 footer {
   margin-top: 28px;
