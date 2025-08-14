@@ -5,10 +5,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Log Book — Twój dziennik rejsu</title>
-  <meta name="description" content="Rejestruj manewry jednym kliknięciem. Automatycznie generuj statystyki i opinie z rejsu. Testuj gratis.">
-  
+  <meta name="description"
+    content="Rejestruj manewry jednym kliknięciem. Automatycznie generuj statystyki i opinie z rejsu. Testuj gratis.">
+
   <link rel="stylesheet" href="style.css">
-  
+
   <!-- Analityka -->
   <script async defer data-domain="logbook-beta.netlify.app" src="https://plausible.io/js/plausible.js"></script>
 </head>
@@ -16,212 +17,221 @@
 <body>
   <div class="wrap" role="main">
 
-<!-- HERO -->
-<section class="hero" aria-labelledby="hero-title">
-  <div class="hero-left">
-    <div class="logo" aria-hidden="false">
-      <div class="icon" aria-hidden="true">⛵</div>
-      <h1 id="hero-title">Log Book</h1>
-    </div>
-    <p class="lead">Rejestruj manewry jednym kliknięciem. Generuj dziennik jachtowy i statystyki do opinii z rejsu.</p>
-    
-    <div class="signup" aria-label="Zapis do beta-testów">
-      <button class="btn" onclick="document.getElementById('cta-feedback').scrollIntoView({ behavior: 'smooth' });">
-        Podziel się opinią
-      </button>
-    </div>
-  </div>
-
-  <div class="hero-right" aria-hidden="false">
-    <div class="mockup">
-      <img src="images/mockup.png" alt="Podgląd aplikacji Log Book" loading="lazy" />
-    </div>
-  </div>
-</section>
-
-<!-- HOW IT WORKS -->
-<section id="how-it-works" class="section">
-  <div class="container">
-    <h2>Jak to działa?</h2>
-    <div class="how-grid">
-      <div class="how-item">
-        <p>⏱ <b>Rejestrujesz kluczowe manewry</b> — wystarczy jedno tapnięcie, aby uchwycić czas i rodzaj manewru.</p>
-      </div>
-      <div class="how-item">
-        <p>⛵ <b>Przeglądasz dziennik jachtowy</b> — wszystko zapisujemy lokalnie, działa w trybie offline.</p>
-      </div>
-      <div class="how-item">
-        <p>📊 <b>Generujesz statystykę rejsu</b> — w każdej chwili, bez żmudnego sumowania godzin.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<section id="why" class="section">
-  <div class="container">
-    <h2>Dlaczego warto?</h2>
-    <div class="why-grid">
-      <div class="why-item">
-        <span class="why-icon">⏱</span>
-        <p><b>Oszczędzasz czas</b> — rejestrujesz manewry jednym tapnięciem, a aplikacja sama liczy godziny pod żaglami, na silniku i postoje.</p>
-      </div>
-      <div class="why-item">
-        <span class="why-icon">🌊</span>
-        <p><b>Cieszysz się spokojem</b> — zapomniałeś kliknąć po wyjściu z portu? - Nie ma problemu, możesz w każdej chwili dodać brakujący manewr.</p>
-      </div>
-      <div class="why-item">
-        <span class="why-icon">🔒</span>
-        <p><b>Zachowujesz prywatność</b> — dane zostają na Twoim urządzeniu; eksportujesz tylko to, co chcesz udostępnić.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="for-whom" class="section">
-  <div class="container">
-    <h2>Dla kogo?</h2>
-    <div class="for-grid">
-      <div class="for-item">
-        <p>⛵ <b>Dla kapitanów i skipperów</b> chcących łatwo dokumentować manewry — nawet zza steru.</p>
-      </div>
-      <div class="for-item">
-        <p>👥 <b>Dla członków załogi</b> chcących zapisywać wspomnienia z rejsu.</p>
-      </div>
-      <div class="for-item">
-        <p>🎓 <b>Dla instruktorów żeglarstwa</b> gromadzących dane do opinii i certyfikatów.</p>
-      </div>
-      <div class="for-item">
-        <p>🛥 <b>Dla armatorów i klubów jachtowych</b> monitorujących statystyki pływań swoich jednostek.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- TRIP SUMMARY -->
-<section id="trip-summary" class="section">
-  <div class="container">
-    <h2>Przykład statystyki rejsu</h2>
-    <table class="trip-table">
-      <tbody>
-        <tr>
-          <td>⛵ Pod żaglami</td>
-          <td class="time">12 h 30 min</td>
-        </tr>
-        <tr>
-          <td>⚙️ Na silniku</td>
-          <td class="time">4 h 15 min</td>
-        </tr>
-        <tr>
-          <td>⚓ W portach i na kotwicy</td>
-          <td class="time">6 h 45 min</td>
-        </tr>
-        <tr class="total-row">
-          <td>Łącznie</td>
-          <td class="time">23 h 30 min</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
-
-<section id="cta-feedback">
-  <div class="wrap">
-    <h2>Podziel się opinią</h2>
-    <p>
-      Aplikacja jest w trakcie przygotowań. Pomóż nam stworzyć
-      rozwiązanie, które pozwoli Ci w pełni cieszyć się rejsem, utrwalając przy tym wszystkie
-      najważniejsze manewry i osiągnięcia żeglarskie.
-    </p>
-
-    <form class="feedback-form" id="feedback-form" action="https://formspree.io/f/xjkozeol" method="POST">
-      <label>
-        1. Jak obecnie rejestrujesz manewry podczas rejsu?
-        <textarea name="current_method" rows="2" required></textarea>
-      </label>
-
-<label>
-  2. Czy prowadzisz coś w rodzaju dziennika jachtowego?
-  <div class="radio-inline">
-    <label>
-      <input type="radio" name="log_book" value="Tak" required> Tak
-    </label>
-    <label>
-      <input type="radio" name="log_book" value="Nie"> Nie
-    </label>
-  </div>
-</label>
-
-      <label>
-        3. Na ile prawdopodobne jest, że korzystał(a)byś z aplikacji, która automatycznie rejestruje manewry i generuje statystyki rejsu? (1 – wcale, 5 – na pewno)
-        <select name="interest_level" required>
-          <option value="">Wybierz</option>
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-        </select>
-      </label>
-
-      <label>
-        4. Które z poniższych funkcji byłyby dla Ciebie najważniejsze?
-        <div>
-          <label><input type="checkbox" name="features" value="Historia manewrów"> Przeglądanie historii manewrów</label><br>
-          <label><input type="checkbox" name="features" value="Statystyki rejsu"> Statystyki (czas na żaglach, silniku, w porcie)</label><br>
-          <label><input type="checkbox" name="features" value="Opinie z rejsu"> Generowanie opinii z rejsu w PDF</label><br>
-          <label><input type="checkbox" name="features" value="Śledzenie trasy rejsu"> Śledzenie trasy rejsu</label><br>
-          <label><input type="checkbox" name="features" value="Inne"> Inne:
-            <input type="text" name="features_other">
-          </label>
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-left">
+        <div class="logo" aria-hidden="false">
+          <div class="icon" aria-hidden="true">⛵</div>
+          <h1 id="hero-title">Log Book</h1>
         </div>
-      </label>
+        <p class="lead">Rejestruj manewry jednym kliknięciem. Generuj dziennik jachtowy i statystyki do opinii z rejsu.
+        </p>
 
-      <label>
-        5. Co musiałaby oferować ta aplikacja, żebyś używał(a) jej podczas każdego rejsu?
-        <textarea name="must_have" rows="2" required></textarea>
-      </label>
+        <div class="signup" aria-label="Zapis do beta-testów">
+          <button class="btn" onclick="document.getElementById('cta-feedback').scrollIntoView({ behavior: 'smooth' });">
+            Podziel się opinią
+          </button>
+        </div>
+      </div>
 
-      <label>
-        Twój e-mail (opcjonalnie — jeśli chcesz otrzymać informację o starcie aplikacji):
-        <input type="email" name="email">
-      </label>
+      <div class="hero-right" aria-hidden="false">
+        <div class="mockup">
+          <img src="images/mockup.png" alt="Podgląd aplikacji Log Book" loading="lazy" />
+        </div>
+      </div>
+    </section>
 
-      <button type="submit" class="btn">Wyślij opinię</button>
-    </form>
+    <!-- HOW IT WORKS -->
+    <section id="how-it-works" class="section">
+      <div class="container">
+        <h2>Jak to działa?</h2>
+        <div class="how-grid">
+          <div class="how-item">
+            <p>⏱ <b>Rejestrujesz kluczowe manewry</b> — wystarczy jedno tapnięcie, aby uchwycić czas i rodzaj manewru.
+            </p>
+          </div>
+          <div class="how-item">
+            <p>⛵ <b>Przeglądasz dziennik jachtowy</b> — wszystko zapisujemy lokalnie, działa w trybie offline.</p>
+          </div>
+          <div class="how-item">
+            <p>📊 <b>Generujesz statystykę rejsu</b> — w każdej chwili, bez żmudnego sumowania godzin.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <p id="thank-you" style="display:none; text-align:center; margin-top:20px; font-weight:500;">
-      Dziękujemy za Twój feedback! ⛵<br>
-      Twoja opinia pomoże nam stworzyć aplikację dopasowaną do potrzeb żeglarzy.
-    </p>
-  </div>
-</section>
+    <section id="why" class="section">
+      <div class="container">
+        <h2>Dlaczego warto?</h2>
+        <div class="why-grid">
+          <div class="why-item">
+            <span class="why-icon">⏱</span>
+            <p><b>Oszczędzasz czas</b> — rejestrujesz manewry jednym tapnięciem, a aplikacja sama liczy godziny pod
+              żaglami, na silniku i postoje.</p>
+          </div>
+          <div class="why-item">
+            <span class="why-icon">🌊</span>
+            <p><b>Cieszysz się spokojem</b> — zapomniałeś kliknąć po wyjściu z portu? - Nie ma problemu, możesz w każdej
+              chwili dodać brakujący manewr.</p>
+          </div>
+          <div class="why-item">
+            <span class="why-icon">🔒</span>
+            <p><b>Zachowujesz prywatność</b> — dane zostają na Twoim urządzeniu; eksportujesz tylko to, co chcesz
+              udostępnić.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<script>
-document.getElementById('feedback-form').addEventListener('submit', async function(e) {
-  e.preventDefault();
-  const form = e.target;
-  const data = new FormData(form);
+    <section id="for-whom" class="section">
+      <div class="container">
+        <h2>Dla kogo?</h2>
+        <div class="for-grid">
+          <div class="for-item">
+            <p>⛵ <b>Dla kapitanów i skipperów</b> chcących łatwo dokumentować manewry — nawet zza steru.</p>
+          </div>
+          <div class="for-item">
+            <p>👥 <b>Dla członków załogi</b> chcących zapisywać wspomnienia z rejsu.</p>
+          </div>
+          <div class="for-item">
+            <p>🎓 <b>Dla instruktorów żeglarstwa</b> gromadzących dane do opinii i certyfikatów.</p>
+          </div>
+          <div class="for-item">
+            <p>🛥 <b>Dla armatorów i klubów jachtowych</b> monitorujących statystyki pływań swoich jednostek.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  const res = await fetch(form.action, {
-    method: form.method,
-    body: data,
-    headers: { 'Accept': 'application/json' }
-  });
+    <!-- TRIP SUMMARY -->
+    <section id="trip-summary" class="section">
+      <div class="container">
+        <h2>Przykład statystyki rejsu</h2>
+        <table class="trip-table">
+          <tbody>
+            <tr>
+              <td>⛵ Pod żaglami</td>
+              <td class="time">12 h 30 min</td>
+            </tr>
+            <tr>
+              <td>⚙️ Na silniku</td>
+              <td class="time">4 h 15 min</td>
+            </tr>
+            <tr>
+              <td>⚓ W portach i na kotwicy</td>
+              <td class="time">6 h 45 min</td>
+            </tr>
+            <tr class="total-row">
+              <td>Łącznie</td>
+              <td class="time">23 h 30 min</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
-  if (res.ok) {
-    form.style.display = 'none';
-    document.getElementById('thank-you').style.display = 'block';
-  } else {
-    alert('Wystąpił błąd. Spróbuj ponownie.');
-  }
-});
-</script>
+    <section id="cta-feedback">
+      <div class="wrap">
+        <h2>Podziel się opinią</h2>
+        <p>
+          Aplikacja jest w trakcie przygotowań. Pomóż nam stworzyć
+          rozwiązanie, które pozwoli Ci w pełni cieszyć się rejsem, utrwalając przy tym wszystkie
+          najważniejsze manewry i osiągnięcia żeglarskie.
+        </p>
 
-<footer>
-  <p>Masz pytanie albo komentarz? Napisz: <a href="mailto:logbook.app@proton.me">logbook.app@proton.me</a></p>
-</footer>
+        <form class="feedback-form" id="feedback-form" action="https://formspree.io/f/xjkozeol" method="POST">
+          <label>
+            1. Jak obecnie rejestrujesz manewry podczas rejsu?
+            <textarea name="current_method" rows="2" required></textarea>
+          </label>
+
+          <label>
+            2. Czy prowadzisz coś w rodzaju dziennika jachtowego?
+            <div class="radio-inline">
+              <label>
+                <input type="radio" name="log_book" value="Tak" required> Tak
+              </label>
+              <label>
+                <input type="radio" name="log_book" value="Nie"> Nie
+              </label>
+            </div>
+          </label>
+
+          <label>
+            3. Na ile prawdopodobne jest, że korzystał(a)byś z aplikacji, która automatycznie rejestruje manewry i
+            generuje statystyki rejsu? (1 – wcale, 5 – na pewno)
+            <select name="interest_level" required>
+              <option value="">Wybierz</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </label>
+
+          <label>
+            4. Które z poniższych funkcji byłyby dla Ciebie najważniejsze?
+            <div>
+              <label><input type="checkbox" name="features" value="Historia manewrów"> Przeglądanie historii
+                manewrów</label><br>
+              <label><input type="checkbox" name="features" value="Statystyki rejsu"> Statystyki (czas na żaglach,
+                silniku, w porcie)</label><br>
+              <label><input type="checkbox" name="features" value="Opinie z rejsu"> Generowanie opinii z rejsu w
+                PDF</label><br>
+              <label><input type="checkbox" name="features" value="Śledzenie trasy rejsu"> Śledzenie trasy
+                rejsu</label><br>
+              <label><input type="checkbox" name="features" value="Inne"> Inne:
+                <input type="text" name="features_other">
+              </label>
+            </div>
+          </label>
+
+          <label>
+            5. Co musiałaby oferować ta aplikacja, żebyś używał(a) jej podczas każdego rejsu?
+            <textarea name="must_have" rows="2" required></textarea>
+          </label>
+
+          <label>
+            Twój e-mail (opcjonalnie — jeśli chcesz otrzymać informację o starcie aplikacji):
+            <input type="email" name="email">
+          </label>
+
+          <button type="submit" class="btn">Wyślij opinię</button>
+        </form>
+
+        <p id="thank-you" style="display:none; text-align:center; margin-top:20px; font-weight:500;">
+          Dziękujemy za Twój feedback! ⛵<br>
+          Twoja opinia pomoże nam stworzyć aplikację dopasowaną do potrzeb żeglarzy.
+        </p>
+      </div>
+    </section>
+
+    <script>
+      document.getElementById('feedback-form').addEventListener('submit', async function (e) {
+        e.preventDefault();
+        const form = e.target;
+        const data = new FormData(form);
+
+        const res = await fetch(form.action, {
+          method: form.method,
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (res.ok) {
+          form.style.display = 'none';
+          document.getElementById('thank-you').style.display = 'block';
+        } else {
+          alert('Wystąpił błąd. Spróbuj ponownie.');
+        }
+      });
+    </script>
+
+    <footer>
+      <p>Masz pytanie albo komentarz? Napisz: <a href="mailto:logbook.app@proton.me">logbook.app@proton.me</a></p>
+    </footer>
 
 </body>
+
 </html>
