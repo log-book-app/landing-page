@@ -124,38 +124,88 @@
   </div>
 </section>
 
-<section id="cta-section" class="section">
-  <div class="container">
-    <h2>Dołącz do naszych testerów</h2>
-    <p class="cta-lead">
-      Aplikacja jest w trakcie przygotowań. Dołącz do grona zainteresowanych i pomóż nam stworzyć rozwiązanie,
-      które pozwoli Ci w pełni cieszyć się rejsem, utrwalając przy tym wszystkie najważniejsze manewry i Twoje osiągnięcia żeglarskie.
+<section id="cta-feedback">
+  <div class="wrap">
+    <h2>Podziel się swoją opinią</h2>
+    <p>
+      Aplikacja jest w trakcie przygotowań. Pomóż nam stworzyć
+      rozwiązanie, które pozwoli Ci w pełni cieszyć się rejsem, utrwalając przy tym wszystkie
+      najważniejsze manewry i osiągnięcia żeglarskie.
     </p>
-    <div class="cta-buttons">
-      <button class="btn">Zapisz się na listę</button>
-      <button class="btn secondary">Prześlij uwagi</button>
-    </div>
+
+    <form class="feedback-form" id="feedback-form">
+      <label>
+        1. Jak obecnie rejestrujesz przebieg i manewry podczas rejsu?
+        <textarea name="current_method" rows="3" required></textarea>
+      </label>
+
+      <label>
+        2. Na ile prawdopodobne jest, że korzystał(a)byś z aplikacji, która automatycznie rejestruje manewry i generuje statystyki rejsu? (1 – wcale, 5 – na pewno)
+        <select name="interest_level" required>
+          <option value="">Wybierz</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </label>
+
+      <label>
+        3. Które z poniższych funkcji byłyby dla Ciebie najważniejsze?
+        <div>
+          <label><input type="checkbox" name="features" value="Śledzenie trasy rejsu"> Śledzenie trasy rejsu</label><br>
+          <label><input type="checkbox" name="features" value="Automatyczne logowanie manewrów"> Automatyczne logowanie manewrów</label><br>
+          <label><input type="checkbox" name="features" value="Statystyki rejsu"> Statystyki (czas na żaglach vs silnik)</label><br>
+          <label><input type="checkbox" name="features" value="Udostępnianie rejsu"> Udostępnianie rejsu znajomym</label><br>
+          <label><input type="checkbox" name="features" value="Inne"> Inne:
+            <input type="text" name="features_other">
+          </label>
+        </div>
+      </label>
+
+      <label>
+        4. Co musiałaby oferować ta aplikacja, żebyś używał(a) jej podczas każdego rejsu?
+        <textarea name="must_have" rows="3" required></textarea>
+      </label>
+
+      <label>
+        Twój e-mail (opcjonalnie — jeśli chcesz otrzymać informację o starcie aplikacji):
+        <input type="email" name="email">
+      </label>
+
+      <button type="submit" class="btn">Wyślij opinię</button>
+    </form>
+
+    <p id="thank-you" style="display:none; text-align:center; margin-top:20px; font-weight:500;">
+      Dziękujemy za Twój feedback! ⛵<br>
+      Twoja opinia pomoże nam stworzyć aplikację dopasowaną do potrzeb żeglarzy.
+    </p>
   </div>
 </section>
+
+<script>
+document.getElementById('feedback-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  // miejsce na wysyłkę danych do API lub formularza zewnętrznego
+  this.style.display = 'none';
+  document.getElementById('thank-you').style.display = 'block';
+});
+</script>
+
+
+
+
+
+
+
+
+
 
 
 <footer>
   <p>Masz pytanie albo komentarz? Napisz: <a href="mailto:logbook.app@proton.me">logbook.app@proton.me</a></p>
 </footer>
 
-
-  <script>
-    // tymczasowa obsługa formularza — podmień `action` na swój backend/Google Form
-    (function(){
-      const f = document.querySelector('form');
-      if(!f) return;
-      f.addEventListener('submit', (e)=>{
-        e.preventDefault();
-        const email = f.querySelector('[name=email]').value || '[brak]';
-        alert('Dziękujemy! Zapisano: ' + email + '
-(Ustaw action formularza na swój Google Form / Mailer)');
-      });
-    })();
-  </script>
 </body>
 </html>

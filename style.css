@@ -321,47 +321,104 @@ p.lead {
 /* =========================
    CTA
 ========================= */
-#cta-section {
+/* FEEDBACK / CTA SECTION */
+#cta-feedback {
   background-color: var(--muted);
   padding: 60px 20px;
+}
+
+#cta-feedback h2 {
+  text-align: center;
+  margin-bottom: 12px;
+  font-size: 1.8rem;
+}
+
+#cta-feedback p {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 32px;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+/* Formularz feedbacku */
+.feedback-form {
+  max-width: 500px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 20px;
   border-radius: var(--radius);
-  margin-top: 40px;
-}
-
-#cta-section h2 {
-  text-align: center;
-  font-size: 2em;
-  margin-bottom: 15px;
-  color: var(--navy);
-}
-
-#cta-section .cta-lead {
-  max-width: 600px;
-  margin: 0 auto 30px;
-  font-size: 1.1em;
-  line-height: 1.5;
-  text-align: center;
-}
-
-.cta-buttons {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   display: flex;
-  justify-content: center;
-  gap: 14px;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 18px;
 }
 
-#cta-section .btn {
-  font-size: 1rem;
-  padding: 14px 24px;
-}
-
-#cta-section .btn.secondary {
-  background: transparent;
+.feedback-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
   color: var(--navy);
-  border: 2px solid rgba(20, 61, 107, 0.2);
-  box-shadow: none;
+  font-size: 1rem;
 }
 
+.feedback-form input,
+.feedback-form textarea,
+.feedback-form select {
+  margin-top: 6px;
+  padding: 12px;
+  border: 1px solid #d0d8e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.feedback-form input:focus,
+.feedback-form textarea:focus,
+.feedback-form select:focus {
+  outline: none;
+  border-color: var(--blue);
+  box-shadow: 0 0 0 2px rgba(43, 111, 179, 0.2);
+}
+
+.feedback-form button {
+  align-self: flex-start;
+}
+
+/* Feedback form improvements */
+.feedback-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  color: var(--navy);
+  font-size: 1rem;
+}
+
+.feedback-form input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+.feedback-form div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.feedback-form div label {
+  flex-direction: row;
+  align-items: center;
+  font-weight: 400;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.feedback-form input[name="features_other"] {
+  margin-left: 6px;
+  flex: 1;
+  padding: 8px;
+  font-size: 0.95rem;
+}
 
 
 footer {
