@@ -324,7 +324,7 @@ p.lead {
 /* FEEDBACK / CTA SECTION */
 #cta-feedback {
   background-color: var(--muted);
-  padding: 60px 20px;
+  padding: 0px 20px;
 }
 
 #cta-feedback h2 {

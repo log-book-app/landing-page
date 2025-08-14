@@ -16,26 +16,28 @@
 <body>
   <div class="wrap" role="main">
 
-    <!-- HERO -->
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-left">
-        <div class="logo" aria-hidden="false">
-          <div class="icon" aria-hidden="true">⛵</div>
-          <h1 id="hero-title">Log Book</h1>
-        </div>
-        <p class="lead">Rejestruj manewry jednym kliknięciem. Generuj dziennik jachtowy i statystyki do opinii z rejsu.</p>
-        <div class="signup" aria-label="Zapis do beta-testów">
-          <form action="#" method="get" style="display:flex;gap:8px;width:100%">
-            <input type="email" name="email" placeholder="Twój e-mail" aria-label="email" />
-            <button class="btn" type="submit">Testuj gratis</button>
-          </form>
-        </div>
-      </div>
+<!-- HERO -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-left">
+    <div class="logo" aria-hidden="false">
+      <div class="icon" aria-hidden="true">⛵</div>
+      <h1 id="hero-title">Log Book</h1>
+    </div>
+    <p class="lead">Rejestruj manewry jednym kliknięciem. Generuj dziennik jachtowy i statystyki do opinii z rejsu.</p>
+    
+    <div class="signup" aria-label="Zapis do beta-testów">
+      <button class="btn" onclick="document.getElementById('cta-feedback').scrollIntoView({ behavior: 'smooth' });">
+        Podziel się opinią
+      </button>
+    </div>
+  </div>
 
-      <div class="hero-right" aria-hidden="false">
-        <div class="mockup"><img src="images/mockup.png" alt="Podgląd aplikacji Log Book" loading="lazy"/></div>
-      </div>
-    </section>
+  <div class="hero-right" aria-hidden="false">
+    <div class="mockup">
+      <img src="images/mockup.png" alt="Podgląd aplikacji Log Book" loading="lazy" />
+    </div>
+  </div>
+</section>
 
 <!-- HOW IT WORKS -->
 <section id="how-it-works" class="section">
@@ -43,13 +45,13 @@
     <h2>Jak to działa?</h2>
     <div class="how-grid">
       <div class="how-item">
-        <p>⏱ <b>Rejestruj momenty kluczowych manewrów</b> — wystarczy jedno tapnięcie, aby uchwycić czas wykonania manewru.</p>
+        <p>⏱ <b>Rejestrujesz kluczowe manewry</b> — wystarczy jedno tapnięcie, aby uchwycić czas i rodzaj manewru.</p>
       </div>
       <div class="how-item">
-        <p>⛵ <b>Przeglądaj dziennik jachtowy</b> — wszystko zapisuje się na bieżąco w czytelnej formie.</p>
+        <p>⛵ <b>Przeglądasz dziennik jachtowy</b> — wszystko zapisujemy lokalnie, działa w trybie offline.</p>
       </div>
       <div class="how-item">
-        <p>📊 <b>Generuj statystykę rejsu</b> — bez żmudnego sumowania godzin pod żaglami i na silniku.</p>
+        <p>📊 <b>Generujesz statystykę rejsu</b> — w każdej chwili, bez żmudnego sumowania godzin.</p>
       </div>
     </div>
   </div>
@@ -62,15 +64,15 @@
     <div class="why-grid">
       <div class="why-item">
         <span class="why-icon">⏱</span>
-        <p><b>Oszczędź czas</b> — rejestrujesz manewry jednym tapnięciem, a aplikacja sama liczy godziny pod żaglami, na silniku i postoje.</p>
+        <p><b>Oszczędzasz czas</b> — rejestrujesz manewry jednym tapnięciem, a aplikacja sama liczy godziny pod żaglami, na silniku i postoje.</p>
       </div>
       <div class="why-item">
         <span class="why-icon">🌊</span>
-        <p><b>Ciesz się spokojem</b> — zapomniałeś kliknąć po wyjściu z portu? - Nie ma problemu, możesz w każdej chwili dodać brakujący manewr.</p>
+        <p><b>Cieszysz się spokojem</b> — zapomniałeś kliknąć po wyjściu z portu? - Nie ma problemu, możesz w każdej chwili dodać brakujący manewr.</p>
       </div>
       <div class="why-item">
         <span class="why-icon">🔒</span>
-        <p><b>Zachowaj prywatność</b> — działa offline, dane zostają na Twoim urządzeniu; eksportujesz tylko to, co chcesz udostępnić.</p>
+        <p><b>Zachowujesz prywatność</b> — dane zostają na Twoim urządzeniu; eksportujesz tylko to, co chcesz udostępnić.</p>
       </div>
     </div>
   </div>
@@ -204,16 +206,6 @@ document.getElementById('feedback-form').addEventListener('submit', async functi
   }
 });
 </script>
-
-
-
-
-
-
-
-
-
-
 
 <footer>
   <p>Masz pytanie albo komentarz? Napisz: <a href="mailto:logbook.app@proton.me">logbook.app@proton.me</a></p>
