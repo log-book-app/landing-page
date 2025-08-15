@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://logbook-demo.netlify.app/sitemap.xml
