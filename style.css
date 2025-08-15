@@ -29,6 +29,10 @@ body {
     padding: 20px;
 }
 
+.nowrap {
+  white-space: nowrap;
+}
+
 /* =========================
    GLOBAL ELEMENTS
 ========================= */
