@@ -146,17 +146,21 @@ p.lead {
 }
 
 .mockup {
-    width: 260px;
-    height: 520px;
+    width: 220px;
+    height: 450px;
     border-radius: 28px;
     background: #fff;
     box-shadow: 0 14px 34px rgba(15, 40, 80, 0.35);
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .mockup img {
     max-width: 100%;
-    height: auto;
+    max-height: 100%;
+    object-fit: contain;
     display: block;
 }
 
