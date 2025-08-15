@@ -338,7 +338,7 @@ p.lead {
 }
 
 #cta-feedback p {
-    text-align: center;
+    text-align: justify;
     max-width: 700px;
     margin: 0 auto 32px;
     font-size: 1.1rem;
@@ -417,11 +417,13 @@ p.lead {
     color: var(--text);
 }
 
-.feedback-form input[name="features_other"] {
-    margin-left: 6px;
-    flex: 1;
-    padding: 8px;
-    font-size: 0.95rem;
+/* Zapobiega wychodzeniu pola "Inne" poza formularz */
+.feedback-form input[type="text"][name="features_other"] {
+  display: block;
+  width: 100%;
+  margin-left: 6px;
+  margin-top: 6px; /* mały odstęp od checkboxa */
+  box-sizing: border-box; /* uwzględnia padding i border w szerokości */
 }
 
 .feedback-form .form-group {
