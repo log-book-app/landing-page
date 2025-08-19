@@ -71,7 +71,7 @@
             </p>
           </div>
           <div class="how-item">
-            <p>⛵ <b>Przeglądasz dziennik jachtowy</b> — wszystko zapisujemy lokalnie, działa w trybie offline.</p>
+            <p>⛵ <b>Przeglądasz dziennik jachtowy</b> — działa offline, opcjonalnie synchronizuje się z chmurą.</p>
           </div>
           <div class="how-item">
             <p>📊 <b>Generujesz statystykę rejsu</b> — w każdej chwili, bez żmudnego sumowania godzin.</p>
@@ -174,13 +174,9 @@
         </p>
 
         <form class="feedback-form" id="feedback-form" action="https://formspree.io/f/xjkozeol" method="POST">
-          <label>
-            1. Jak obecnie rejestrujesz manewry podczas rejsu?
-            <textarea name="current_method" rows="2" required></textarea>
-          </label>
 
           <label>
-            2. Czy prowadzisz coś w rodzaju dziennika jachtowego?
+            1. Czy prowadzisz coś w rodzaju dziennika jachtowego?
             <div class="radio-inline">
               <label>
                 <input type="radio" name="log_book" value="Tak" required> Tak
@@ -192,7 +188,12 @@
           </label>
 
           <label>
-            3. Czy używał(a)byś aplikacji, która automatycznie rejestruje manewry i
+            2. W jaki sposób zapisujesz takie zdarzenia jak np. wyjście z portu, postawienie żagli?
+            <textarea name="current_method" rows="2" required></textarea>
+          </label>
+
+          <label>
+            3. Czy używał(a)byś aplikacji, która ułatwia zapisywanie istotnych zdarzeń i
             generuje statystyki rejsu? (1 – zupełnie nie, 5 – na pewno tak)
             <select name="interest_level" required>
               <option value="">Wybierz</option>
@@ -205,21 +206,16 @@
           </label>
 
           <label>
-            4. Co musiałaby oferować ta aplikacja, żebyś używał(a) jej chętniej?
-            <textarea name="must_have" rows="2" required></textarea>
-          </label>
-
-          <label>
-            5. Które z poniższych funkcji byłyby dla Ciebie najważniejsze?
+            4. Które z poniższych funkcji byłyby dla Ciebie najważniejsze?
             <div>
               <label><input type="checkbox" name="features" value="Historia manewrów"> Przeglądanie historii
-                manewrów</label><br>
+                zdarzeń (postawienie żagli, etc)</label><br>
               <label><input type="checkbox" name="features" value="Statystyki rejsu"> Statystyki (czas na żaglach,
                 silniku, w porcie)</label><br>
+              <label><input type="checkbox" name="features" value="Śledzenie trasy rejsu"> Raportowanie ilości
+                przebytych mil morskich</label><br>
               <label><input type="checkbox" name="features" value="Opinie z rejsu"> Generowanie opinii z rejsu w
                 PDF</label><br>
-              <label><input type="checkbox" name="features" value="Śledzenie trasy rejsu"> Śledzenie trasy
-                rejsu</label><br>
               <label><input type="checkbox" name="features" value="Inne"> Inne:
                 <input type="text" name="features_other">
               </label>
