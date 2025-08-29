@@ -455,6 +455,19 @@ footer {
     font-size: 14px;
 }
 
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s;
+}
+
+.contact-link:hover {
+  color: #0073e6;
+}
+
 /* =========================
    RESPONSIVE
 ========================= */
